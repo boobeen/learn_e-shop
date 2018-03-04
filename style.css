@@ -47,7 +47,6 @@ header ul {
 .logo img {
 	height: 90px;
 	width: auto;
-	/*border: none;*/
 	border: 2px solid #c0c0c0;
 	border-radius: 25px;
 	padding: 3px;
@@ -184,7 +183,11 @@ nav a, nav a:active, nav a:visited {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	align-items: center;	
+	align-items: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
 }
 
 .content {
@@ -214,7 +217,6 @@ nav a, nav a:active, nav a:visited {
 }
 
 .thumb {
-	background-color: #ccc;
 	border: 3px inset #c0c0c0;
 	margin: 25px 10px;
 	width: 200px;
@@ -237,11 +239,17 @@ nav a, nav a:active, nav a:visited {
 	border-bottom: 5px dotted #c0c0c0;
 }
 
+.grad {
+	height: 3px;
+	width: 100%;
+	background: linear-gradient(to right, #6c6c6c, #c0c0c0);
+}
+
 .name {
 	color: #54769b;
 	font: 500 20px/24px serif;
 	padding: 3px;
-
+	background-color: #ccc;
 }
 
 .price {
@@ -249,6 +257,7 @@ nav a, nav a:active, nav a:visited {
 	font: 600 24px/32px serif;
 	padding: 3px;
 	text-align: right;
+	background-color: #ccc;
 }
 
 /*==========/ Страница Товара /========*/
@@ -289,6 +298,7 @@ h2 {
 	height: auto;
 	float: left;
 	margin-right: 50px;
+	padding: 5px;
 }
 
 #buy {
